@@ -504,6 +504,12 @@ angular.module('netStatsApp.filters', [])
 			tooltip.push(string);
 		}
 
+		if(node.info.bridge !== '') {
+			string = "Bridge: <b>" + node.info.bridge + "</b>";
+
+			tooltip.push(string);
+		}
+
 		if(node.info.client !== '') {
 			string = "API: <b>" + (typeof node.info.client !== 'undefined' ? node.info.client : '<= 0.0.3') + "</b>";
 
