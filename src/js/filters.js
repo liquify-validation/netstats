@@ -510,6 +510,30 @@ angular.module('netStatsApp.filters', [])
 			tooltip.push(string);
 		}
 
+		if(node.info.role !== '') {
+			string = "Role: <b>" + node.info.role + "</b>";
+
+			tooltip.push(string);
+		}
+
+		if(node.info.fuseAppVersion !== '') {
+			string = "FuseApp: <b>" + node.info.fuseAppVersion + "</b>";
+
+			tooltip.push(string);
+		}
+
+		if(node.info.netStatsVersion !== '') {
+			string = "netStats: <b>" + node.info.netStatsVersion + "</b>";
+
+			tooltip.push(string);
+		}
+
+		if(node.info.parityVersion !== '') {
+			string = "parity: <b>" + node.info.parityVersion + "</b>";
+
+			tooltip.push(string);
+		}
+
 		if(node.info.client !== '') {
 			string = "API: <b>" + (typeof node.info.client !== 'undefined' ? node.info.client : '<= 0.0.3') + "</b>";
 
