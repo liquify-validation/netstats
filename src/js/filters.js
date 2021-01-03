@@ -480,6 +480,12 @@ angular.module('netStatsApp.filters', [])
       }
 		}
 
+		if(node.info.role !== '') {
+			string = "Role: <b>" + node.info.role + "</b>";
+
+			tooltip.push(string);
+		}
+
 		if(node.info.net !== '') {
 			string = "Network: <b>" + (typeof node.info.net !== 'undefined' ? node.info.net : '-') + "</b>";
 
@@ -506,12 +512,6 @@ angular.module('netStatsApp.filters', [])
 
 		if(node.info.bridge !== '') {
 			string = "Bridge: <b>" + node.info.bridge + "</b>";
-
-			tooltip.push(string);
-		}
-
-		if(node.info.role !== '') {
-			string = "Role: <b>" + node.info.role + "</b>";
 
 			tooltip.push(string);
 		}
